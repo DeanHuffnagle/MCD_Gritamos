@@ -4,8 +4,6 @@
 import json
 import time
 import random
-  /
-
 import file_io
 import proxy
 from generate_survey_responses import generate_response
