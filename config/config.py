@@ -66,7 +66,7 @@ RESPONSE_PART_THREE = [
     "might return soon.",
     "I'll definitely come back soon.",
     "heck, I might come back later today!!",
-    "Aleena was supercalifragilisticexpialidocious! I might come back today!!",
+    "the order taker was so nice! I might come back today!!",
     ]
 
 # This is placed at the end of every survey, it is not decided randomly but
