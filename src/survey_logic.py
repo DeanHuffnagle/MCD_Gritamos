@@ -24,7 +24,8 @@ def getChoice(customChoices: list = ["Opt5", "Opt4", "Opt3", "Opt2", "Opt1"], cu
 def clickNext(browser, delay):
     time.sleep(delay)
     browser.get_screenshot_as_file("Screenshots/currentPage.png")
-    browser.find_element(By.ID, "NextButton").click()
+    next_button = browser.find_element(By.ID, "NextButton")
+    next_button.click()
 
 
 def solveTablesWithRadioButtons(browser):

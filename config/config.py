@@ -1,15 +1,25 @@
 # This value will determine how many surveys are completed every hour.
-# if surveys are completed t6o quickly McDonald's won't believe that a human did
+# if surveys are completed to quickly McDonald's won't believe that a human did
 # them, and in this case they'd be right.
 # To be safe, for now, this shouldn't exceed 60, but more testing will be done
 # to find out exactly where the line lies.
-SURVEYS_PER_HOUR = 59
+SURVEYS_PER_HOUR = 30
+
+
+
 
 # Setting this to True will force the bot to work in the background in practice
 # it seems as if this causes failures to happen more often. However, it has a
 # major upside of allowing you to do other things on your computer while the bot
 # is running.
 IS_HIDDEN_BROWSER = True
+
+
+
+
+
+
+
 
 # This setting causes the bot to use fake codes that dont go to any stores.
 # This is only for debugging and development purposes
@@ -73,5 +83,6 @@ RESPONSE_PART_THREE = [
 # rather cycled through in order. These are useful for if you are trying a new
 # setting on the bot, but they lead to highly suspect comments.
 RESPONSE_SIGNATURE = [
-    "",
+    "posthaste.",
+    "quickly.",
     ]

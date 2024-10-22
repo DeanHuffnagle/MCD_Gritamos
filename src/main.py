@@ -34,9 +34,8 @@ print(f"surveys should take approximately {SECONDS_PER_SURVEY} seconds.")
 
 PROXY_FILE_PATH = "TextFiles/proxyServers.txt"
 WINDOW_SIZE = "1920,1080"
-STARTING_PROXY = 0 #0-9
-COUNT = 0
-
+STARTING_PROXY = 2 #0-9
+COUNT = 2
 
 
 if __name__ == "__main__":
@@ -58,7 +57,7 @@ if __name__ == "__main__":
 
     while RECEIPT_CODES:
         code = RECEIPT_CODES.pop(0)
-        proxyServer = PROXY_LIST[session_count%len(PROXY_LIST)]
+        proxyServer = PROXY_LIST[session_count%(len(PROXY_LIST))]
         print(proxyServer)
         if not len(code) == 31:
             print(f"Ignoring invalid code {code}")
@@ -100,6 +99,7 @@ if __name__ == "__main__":
 
         # Get the code parts
         codeParts = code.split("-")
+        print(codeParts)
 
         # Fill all the boxes with the right code parts
         cn1.send_keys(codeParts[0])
@@ -113,6 +113,7 @@ if __name__ == "__main__":
         clickNext(browser, SECONDS_DELAY)
 
         # Check if for some reason the code wasn't valid
+
         if "Error: We are unable to continue the survey based on the information you provided." in browser.page_source:
             print(f"Ignoring invalid code {code}")
             browser.close()
